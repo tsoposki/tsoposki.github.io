@@ -1,24 +1,20 @@
 
 $(function() {
     $controller = new ScrollMagic;
-    $mouseEventOut = $mouseEventHover = $mouseEventClick = null;
     
     smoothScroll();
-    adapt_mainPic_height();
     
     (new ScrollScene({
         triggerElement: "#main .mainPicture",
         triggerHook: 0,
         duration: $(window).height()
-    })).addTo($controller).setTween(TweenMax.fromTo("#main .mainPicture", 1, {
-        backgroundPosition: "center 0px"
+    })).addTo($controller).setTween(TweenMax.fromTo("#main .mainPicture", 0.7, {
+        y: 0,
+        z: 0.01
     }, {
-        backgroundPosition: "center 250px",
+        y: 250,
+        z: 0.01,
         ease: Linear.easeNone
     }));
-
-    $(window).resize(function() {
-        adapt_mainPic_height();
-    });
 
 });

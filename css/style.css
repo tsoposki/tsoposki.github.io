@@ -25,6 +25,11 @@ h1 {
     color: #dcdbdc;
     margin: 0px auto;
 }
+
+#main {
+    overflow: hidden;
+}
+
 .mainPicture {
     min-width: 990px;
     min-height: 800px;
@@ -36,6 +41,12 @@ h1 {
     -ms-transform: translateZ(0);
     -o-transform: translateZ(0);
     transform: translateZ(0);
+    height: 282px; 
+    background-image: url(../images/video_bg.jpg);
+    background-position: 50% 45px;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
 
 }
 
@@ -48,7 +59,7 @@ h1 {
     text-transform: uppercase;
 }
 #main .welcomeTitle {
-    padding-top: 110px;
+    padding-top: 350px;
 }
 #main .welcomeTitle > h1 {
     color: #704663;
