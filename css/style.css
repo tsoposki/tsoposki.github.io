@@ -3,7 +3,9 @@ html, body {
 }
 body {
     background-color: #dcdbdc;
-    overflow-x: hidden
+    overflow-x: hidden;
+    height: 1600px;
+    background-image: url(../images/demo_parallax_bg.png);
 }
 img {
     image-rendering: optimizeQuality;
