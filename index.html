@@ -1,23 +1,33 @@
+<!DOCTYPE html>
 <html>
 <head>
-	<title>ScrollMagic - Example 1</title>
-
-	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="./css/style.css" type="text/css">
+    <script src="./scripts/jquery.min.js"></script>
+    <script src="./scripts/jquery.html5Loader.min.js"></script>
+    <script src="./scripts/jquery.scrollmagic.js" type="text/javascript"></script>
+    <script src="./scripts/jquery.scrollmagic.debug.js" type="text/javascript"></script>
+    <script src="./scripts/TweenMax.min.js"></script>
+    <script src="./scripts/ScrollToPlugin.min.js"></script>
+    
+    <script src="./scripts/functions.js" type="text/javascript"></script>
+    <script src="./scripts/scripts.js" type="text/javascript"></script>
 </head>
-<body>
 
-	<div align="center" id="parallax1" class="parallaxParent">
-      <div class="parallaxChild">
-         <h1>This is some text ladies and gentlemen!</h1>
-      </div>
-   </div>
-
-	<script type="text/javascript" src="lib/jquery/jquery.min.js"></script>
-	<script type="text/javascript" src="lib/greensock/TweenMax.min.js"></script>
-	<script type="text/javascript" src="lib/scrollmagic/uncompressed/ScrollMagic.js"></script>
-	<script type="text/javascript" src="lib/scrollmagic/uncompressed/plugins/animation.gsap.js"></script>
-	<script type="text/javascript" src="lib/scrollmagic/uncompressed/plugins/debug.addIndicators.js"></script>
-
-	<script type="text/javascript" src="js/app.js"></script>
+<body style="height: 1600px">
+    <section id="main">
+        <article
+            class="mainPicture"
+            style=
+            "height: 282px; 
+            background-image: url(images/france-main-picture.jpg);
+            background-position: 50% 45px;"
+        >
+            <div class="welcomeTitle">
+                <h1>paris</h1>
+                <div>das ist some text dude</div>
+            </div>
+        </article>
+    </section>
 </body>
+
 </html>

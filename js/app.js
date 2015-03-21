@@ -1,15 +1,14 @@
 // init controller
-var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter", duration: "200%"}});
+var controller = new ScrollMagic.Controller({globalSceneOptions: {triggerHook: "onEnter"}});
 
 // build scenes
-new ScrollMagic.Scene({triggerElement: "#parallax1"})
-        .setTween("#parallax1 > div", {y: "80%", ease: Linear.easeNone})
-        .addIndicators()
-        .addTo(controller);
-
-new ScrollMagic.Scene({triggerElement: "#parallax1"})
-   .setTween(".parallaxChild > h1", {y: "250%", ease: Linear.easeNone})
-   .addIndicators()
-   .addTo(controller);
-
+new ScrollMagic.Scene({triggerElement: '.parallaxParent', duration: 600})
+	.setTween (
+		TweenMax.fromTo(
+			'.parallaxChild h1', 1, 
+			{ y:100, z:0.01 },
+			{ y:800, z:0.01, ease: Linear.easeNone }
+		)
+	)
+	.addTo(controller);
 
