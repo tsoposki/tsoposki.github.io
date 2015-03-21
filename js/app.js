@@ -8,7 +8,7 @@ new ScrollMagic.Scene({triggerElement: "#parallax1"})
         .addTo(controller);
 
 new ScrollMagic.Scene({triggerElement: "#parallax1"})
-   .setTween(".parallaxChild > h1", {y: "250%", bounce: Linear.easeInOut})
+   .setTween(".parallaxChild > h1", {y: "250%", ease: Linear.easeNone})
    .addIndicators()
    .addTo(controller);
 
