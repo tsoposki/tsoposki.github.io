@@ -3,8 +3,16 @@ html, body {
 }
 body {
     background-color: #dcdbdc;
-    height: 3600px;
+    overflow-x: hidden;
+    height: 1600px;
     background-image: url(../images/demo_parallax_bg.png);
+}
+img {
+    image-rendering: optimizeQuality;
+    -webkit-image-rendering: optimizeQuality;
+}
+.bgViolet {
+    background-color: #704663;
 }
 h1 {
     font-family: 'Oswald', sans-serif;
@@ -20,21 +28,26 @@ h1 {
 
 #main {
     overflow: hidden;
-    width: 100%;
 }
 
 .mainPicture {
     min-width: 990px;
     min-height: 800px;
     margin: 0 auto;
+    background-position: center 0px;
     background-repeat: no-repeat;
-    -webkit-transform: translateZ(0.01);
-    -ms-transform: translateZ(0.01);
-    -o-transform: translateZ(0.01);
-    transform: translateZ(0.01);
+    position: relative;
+    -webkit-transform: translateZ(0);
+    -ms-transform: translateZ(0);
+    -o-transform: translateZ(0);
+    transform: translateZ(0);
+    height: 282px; 
     background-image: url(../images/video_bg.jpg);
     background-position: 50% 45px;
     position: relative;
+    overflow: hidden;
+    width: 100%;
+
 }
 
 .welcomeTitle div {

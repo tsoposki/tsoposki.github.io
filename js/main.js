@@ -1,34 +1,36 @@
 $(function() {
-    // init controller
-    var controller = new ScrollMagic.Controller();
-
-    var target = $("#main .mainPicture");
-    var targetHeight = target.css("height");
-
-    var steppedEase = new SteppedEase(7);
-
-    var tween = TweenMax.fromTo(
-            target, 0.5, {
-                y: 0,
-                z: 0.01, 
-                force3D: "true", 
-                ease: steppedEase
-            },
-            {
-                y: 280,
-                z: 0.01, 
-                force3D: "true",
-                ease: steppedEase
-            }
-
-    );
-
-    // build scene
-    var scene = new ScrollMagic.Scene({triggerElement: "nothing", duration: targetHeight})
-                    .setTween(tween)
-                    .addTo(controller);
-
+    $controller = new ScrollMagic;
+    
+    trajche();
+    
+    (new ScrollScene({
+        triggerElement: "#main .mainPicture",
+        triggerHook: 0,
+        duration: $(window).height()
+    })).addTo($controller).setTween(TweenMax.fromTo("#main .mainPicture", 0.7, {
+        y: 0,
+        z: 0.01
+    }, {
+        y: 250,
+        z: 0.01,
+        ease: Linear.easeNone
+    }));
 
 });
 
-
+function trajche() {
+    var a = $(window);
+    a.on("mousewheel DOMMouseScroll", function(b) {
+        b.preventDefault();
+        b = b.originalEvent.wheelDelta / 120 || -b.originalEvent.detail / 3;
+        b = (a.scrollTop() - parseInt(280 * b)).toFixed(2);
+        TweenMax.to(a, 0.7, {
+            scrollTo: {
+                y: b,
+                z: 0.01,
+                autoKill : true // Allow scroll position to change outside itself
+            },
+            ease: Linear.easeNone
+        })
+    })
+}
